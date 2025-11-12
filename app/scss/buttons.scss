@@ -1,0 +1,28 @@
+.button-green {
+    background: var(--green);
+    color: var(--so-green);
+    border-radius: 600px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+.button-white {
+    background: transparent;
+    color: var(--white);
+    border-radius: 600px;
+    border: 1.5px solid var(--white);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    svg {
+        width: 14px;
+        height: 14px;
+    }
+}

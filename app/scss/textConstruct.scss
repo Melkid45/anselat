@@ -1,0 +1,44 @@
+:root{
+    --base-text: 18px;
+    --medium-text: 24px;
+    --big-text: 128px;
+    --title-text: 82px;
+    --button-text: 20px;
+    --work-title: 56px;
+}
+.base {
+    font-size: var(--base-text);
+    line-height: 125%;
+    text-align: start;
+    font-weight: 400;
+}
+.medium {
+    font-size: var(--medium-text);
+    line-height: 100%;
+    text-align: start;
+    font-weight: 500;
+}
+.awesome{
+    font-size: var(--big-text);
+    line-height: 100%;
+    text-align: start;
+    font-weight: 400;
+}
+.title{
+    font-size: var(--title-text);
+    line-height: 100%;
+    text-align: start;
+    font-weight: 400;
+}
+.button{
+    font-size: var(--button-text);
+    line-height: 125%;
+    text-align: start;
+    font-weight: 400;
+}
+.work-title{
+    font-size: var(--work-title);
+    line-height: 100%;
+    text-align: start;
+    font-weight: 400;
+}

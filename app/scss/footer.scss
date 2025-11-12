@@ -1,0 +1,72 @@
+.footer{
+    width: 100%;
+    margin-top: 128px;
+    padding-bottom: 100px;
+    &__body{
+        padding-top: 128px;
+        border-top: 2px solid #B2B2B233;
+        display: flex;
+        flex-direction: column;
+        gap: 143px;
+        &-main{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            .info{
+                display: flex;
+                flex-direction: column;
+                gap: 34px;
+                p{
+                    color: var(--so-green);
+                    font-size: 32px;
+                }
+                button{
+                    padding: 23px 42px;
+                    max-width: max-content;
+                }
+            }
+            .menus{
+                display: flex;
+                gap: 82px;
+                nav{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                    span{
+                        color: var(--so-green);
+                    }
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+                        li{
+                            color: var(--so-green);
+                            opacity: .4;
+                        }
+                    }
+                }
+            }
+        }
+        &-soft{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            p{
+                color: var(--so-green);
+                opacity: .4;
+            }
+            button{
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                background: transparent;
+                svg{
+                    width: 14px;
+                    height: 14px;
+                }
+                color: #363B2366;
+            }
+        }
+    }
+}
