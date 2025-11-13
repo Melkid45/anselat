@@ -1,0 +1,16 @@
+.el--fade{
+    transition: all 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(50%);
+}
+.el--opacity{
+    transition: all 0.6s ease-out;
+    opacity: 0;
+}
+.el--opacity.show{
+    opacity: 1;
+}
+.el--fade.show{
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -113,5 +113,5 @@ exports.pages = pages;
 exports.sprite = sprite;
 exports.watching = watching;
 exports.building = building;
-exports.build = series(building);
+exports.build = series(cleanDist,building);
 exports.default = parallel(styles, images, scripts, pages, watching);
