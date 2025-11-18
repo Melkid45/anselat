@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+" rel="stylesheet">
+    <link rel="stylesheet" href="scss/style.min.css">
+    <title>Anselat</title>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="logo">
+            <svg width="224" height="59" viewBox="0 0 224 59" fill="none" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="224" height="59" fill="url(#pattern0_153_662)" />
+                <defs>
+                    <pattern id="pattern0_153_662" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_153_662" transform="matrix(0.00612542 0 0 0.0232558 -0.00534676 0)" />
+                    </pattern>
+                    <image id="image0_153_662" width="165" height="43" preserveAspectRatio="none"
+                        xlink:href="data:image/png;base64,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" />
+                </defs>
+            </svg>
+
+        </div>
+    </div>
+    <header class="header back">
+        <div class="container">
+            <div class="header__body">
+                <a href="" class="header__logo">
+                    <img src="images/dist/logo.svg" alt="" />
+                </a>
+                <nav class="header__menu">
+                    <ul>
+                        <li class="base">
+                            <a href="">Sākums</a>
+                        </li>
+                        <li class="base">
+                            <a href="">Par mums</a>
+                        </li>
+                        <li class="base">
+                            <a href="">Mūsu darbi</a>
+                        </li>
+                        <li class="base">
+                            <a href="">Materiāli</a>
+                        </li>
+                        <li class="base">
+                            <a href="">Kontakti</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__action">
+                    <div class="language base">
+                        LV
+                        <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.353516 0.353554L4.35352 4.35355L8.35352 0.353554" stroke="#363B23"
+                                stroke-opacity="0.4" />
+                        </svg>
+                    </div>
+                    <a href="" class="button button--green button--middle">
+                        Aprēķināt cenu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="poster">
+            <img src="images/dist/about.webp" alt="">
+            <div class="poster__body">
+                <div class="poster__body-breadcrumbs">
+                    <a class="medium" href="">Sākums -</a>
+                    <span class="medium">Par mums</span>
+                </div>
+                <h1 class="awesome">
+                    Par mums
+                </h1>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="about__body">
+                    <h2 class="title">
+                        Uzziniet, kas mēs esam <br> un ko mēs darām
+                    </h2>
+                    <div class="about__body-frame">
+                        <img src="images/dist/about-img.webp" alt="">
+                        <div class="about__body-frame-info">
+                            <div class="item">
+                                <h3 class="work__title">
+                                    Mēs varam realizēt <br> Jūsu sapņus
+                                </h3>
+                                <p class="medium">
+                                    Mūsu firma, kas dibināta 2005.gadā, orientējas uz mēbeļu izgatavošanu pēc individuāla
+                                    pasūtījuma. Mēs varam realizēt Jūsu sapņus, izmantojot mūsdienīgus kvalitatīvus materiālus
+                                    un plašu krāsu, toņu un faktūras izvēles klāstu .
+                                    <br><br>
+                                    Katram ir sava individuālā gaume un katrs vēlas redzēt savu īpašo “ rozīnīti ” , kas
+                                    harmoniski iederēsies mājā un priecēs katru dienu.
+                                </p>
+                            </div>
+                            <div class="item">
+                                <h3 class="work__title">
+                                    Tieši klients vienmēr <br> ir projekta autors
+                                </h3>
+                                <p class="medium">
+                                    Mēs tikai palīdzam realizēt idejas dzīvē. Tādā veidā, katrs priekšmets ir neatkārtojams.
+                                    Mēbeles pēc pasūtījuma spēj iemiesot Jūsu sapni un uzskatus par dzīvokļa (mājas) iekārtojumu
+                                    ar maksimālu komfortu, atbilstoši Jūsu dzīves veidam un stila izpratnei, saskaņā ar Jūsu
+                                    iespējām.
+                                    <br><br>
+                                    Kādām jābūt mēbelēm – kvalitatīvām, interesantām un individuālām. Mēs garantējam – mūsu
+                                    veidotās mēbeles neliks Jums vilties.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="indicators">
+            <div class="container">
+                <div class="indicators__body">
+                    <div class="item el--fade">
+                        <div class="awesome">2005</div>
+                        <p class="medium">Dibināšanas gads</p>
+                    </div>
+                    <div class="item el--fade">
+                        <div class="awesome">1 600+</div>
+                        <p class="medium">Projekts</p>
+                    </div>
+                    <div class="item el--fade">
+                        <div class="awesome">500+</div>
+                        <p class="medium">Klienti</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="request">
+            <div class="container">
+                <div class="request__body">
+                    <div class="request__image el--opacity">
+                        <img src="images/dist/feedback.webp" alt="" />
+                    </div>
+                    <div class="request__body-frame">
+                        <div class="request__head el--fade">
+                            <h2 class="work__title">
+                                Izsaukt meistaru <br />
+                                mērījumiem
+                            </h2>
+                            <p class="medium">
+                                Norādiet adresi un savus kontaktus - mēs <br />
+                                sazināsimies ar jums, lai saskaņotu par meistara vizīti.
+                            </p>
+                        </div>
+                        <form action="" class="request__form">
+                            <div class="inputs el--fade">
+                                <div class="input-wrap">
+                                    <label class="medium" for="">Jūsu adrese</label>
+                                    <input placeholder="Viestura prospekts 2, Ziemeļu rajons, Rīga, LV-1005" type="text" />
+                                </div>
+                                <div class="input-wrap el--fade">
+                                    <label class="medium" for="">Jūsu tālruņa numurs</label>
+                                    <input placeholder="+371 20 000 000" type="tel" />
+                                </div>
+                            </div>
+                            <div class="checkbox el--fade">
+                                <input type="checkbox" />
+                                <span></span>
+                                <p>
+                                    Atzīmējiet, ja šim numuram ir WhatsApp, un vēlaties saņemt
+                                    atbildi tur.
+                                </p>
+                            </div>
+                            <button class="button button--green button--middle el--fade">
+                                Nosūtīt pieprasījumu
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__up">
+                <div class="el--fade">
+                    <a href="" class="button button--green button--middle">
+                        Sazināties ar mums
+                    </a>
+                </div>
+                <div class="footer__up-container">
+                    <div class="footer__contacts el--fade">
+                        <span class="medium">Adrese</span>
+                        <p>Viestura prospekts 2, Ziemeļu rajons, Rīga, LV-1005</p>
+                        <a href="">
+                            Iegūt norādes
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.70703 17L16.707 1" stroke="#363B23" stroke-width="2" stroke-linejoin="round">
+                                </path>
+                                <path d="M0.707031 1L16.707 1L16.707 17" stroke="#363B23" stroke-width="2"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer__contacts el--fade">
+                        <span class="medium">Telefons</span>
+                        <a href="tel:+37126336977">
+                            +371 26 336 977
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.70703 17L16.707 1" stroke="#363B23" stroke-width="2" stroke-linejoin="round">
+                                </path>
+                                <path d="M0.707031 1L16.707 1L16.707 17" stroke="#363B23" stroke-width="2"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer__contacts el--fade">
+                        <span class="medium">E-pasts</span>
+                        <a href="mailto:info@anselat.lv">
+                            info@anselat.lv
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.70703 17L16.707 1" stroke="#363B23" stroke-width="2" stroke-linejoin="round">
+                                </path>
+                                <path d="M0.707031 1L16.707 1L16.707 17" stroke="#363B23" stroke-width="2"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__main">
+                <a href="" class="logo el--fade">
+                    <img src="images/dist/contact.svg" alt="" />
+                </a>
+                <div class="menus">
+                    <nav class="el--fade">
+                        <span class="medium">Anselat</span>
+                        <ul>
+                            <li class="base">
+                                <a href="">Par mums</a>
+                            </li>
+                            <li class="base">
+                                <a href="">Mūsu darbi</a>
+                            </li>
+                            <li class="base">
+                                <a href="">Materiāli</a>
+                            </li>
+                            <li class="base">
+                                <a href="">Kontakti</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="el--fade">
+                        <span class="medium">Sadaļas</span>
+                        <ul>
+                            <li class="base">
+                                <a href="">Virtuves</a>
+                            </li>
+                            <li class="base">
+                                <a href="">Iebūvētie skapji</a>
+                            </li>
+                            <li class="base">
+                                <a href="">Mēbeles vannas istabai</a>
+                            </li>
+                            <li class="base">
+                                <a href="">Pārējās mēbeles</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="el--fade">
+                        <span class="medium">Sociālie tīkli</span>
+                        <ul>
+                            <li class="base">
+                                <a href="">Facebook</a>
+                            </li>
+                            <li class="base">
+                                <a href="">Instagram</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div></div>
+            </div>
+            <div class="footer__soft el--fade">
+                <p class="base">© 2025 Anselat SIA Visas tiesības aizsargātas</p>
+                <button class="base">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.8535 13.707L6.8535 0.707049" stroke="#AFB1A7" stroke-linejoin="round" />
+                        <path d="M0.353516 7.20703L6.8535 0.707049L13.3535 7.20703" stroke="#AFB1A7" />
+                    </svg>
+                    Atpakaļ uz sākumu
+                </button>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
