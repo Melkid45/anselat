@@ -1,0 +1,614 @@
+@media (max-width: 2560px) {
+    html {
+        font-size: calc(100vw / 1920);
+    }
+
+    body {
+        max-width: 1920rem;
+    }
+
+    .preloader {
+        .logo {
+            width: 460rem;
+            height: 176rem;
+        }
+    }
+
+    .container {
+        padding: 0 40rem;
+        max-width: 1720rem;
+    }
+
+
+    :root {
+        --base-text: 18rem;
+        --medium-text: 22rem;
+        --big-text: 128rem;
+        --title-text: 82rem;
+        --button-text: 18rem;
+        --work-title: 56rem;
+        --heading: 150rem;
+    }
+
+    .button {
+        gap: 8rem;
+        border-radius: 60rem;
+    }
+
+
+    .button-fade {
+        .wrap-animation {
+            max-height: 22.5rem;
+        }
+    }
+
+    .main-title {
+        span.walker {
+            width: 32rem;
+        }
+    }
+
+    .poster {
+        height: 780rem;
+        padding: 133rem;
+        &__body {
+            gap: 60rem;
+            &-works--tab {
+                gap: 48rem;
+                button {
+                    padding: 0 12rem 12rem 12rem;
+                    font-size: 32rem;
+                }
+
+                button::after {
+                    height: 1rem;
+                }
+            }
+        }
+    }
+    .about {
+        .container {
+            padding: 0 103rem;
+        }
+
+        &__body {
+            gap: 80rem;
+            &-frame {
+                gap: 24rem;
+                img {
+                    width: 712rem;
+                    height: 800rem;
+                }
+                &-info {
+                    gap: 200rem;
+                    padding: 48rem;
+                    .item {
+                        gap: 46rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .button--green {
+        svg {
+            width: 14rem;
+            height: 14rem;
+        }
+    }
+
+    .button--white {
+        border: 1.5rem solid var(--white);
+        svg {
+            width: 14rem;
+            height: 14rem;
+        }
+    }
+
+    .button--small {
+        padding: 18rem 28rem;
+    }
+
+    .button--middle {
+        padding: 26rem 40rem;
+    }
+
+    .case {
+        &__body {
+            &-item {
+                gap: 80rem;
+                .item--frame {
+                    row-gap: 100rem;
+                    column-gap: 38rem;
+                    &-el {
+                        gap: 48rem;
+                        padding-bottom: 100rem;
+                        border-bottom: 1rem solid #B2B2B233;
+                        .wrap {
+                            border-radius: 24rem;
+                            img {
+                                border-radius: 24rem;
+                            }
+                            .circle {
+                                width: 64rem;
+                                height: 64rem;
+                                margin-top: -32rem;
+                                margin-left: -32rem;
+                                svg {
+                                    width: 18rem;
+                                    height: 18rem;
+                                }
+                            }
+                        }
+
+                        .info {
+                            h4 {
+                                font-size: 42rem;
+                            }
+                            p {
+                                font-size: 24rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .contact {
+        padding: 259rem 0rem 149rem 0rem;
+        &__body {
+            gap: 24rem;
+            &-request {
+                border-radius: 24rem;
+                padding: 60rem;
+                gap: 32rem;
+                &-head {
+                    gap: 36rem;
+                }
+                .request--form {
+                    gap: 40rem;
+                    .inputs {
+                        gap: 32rem;
+                        .input--form-wrap {
+                            gap: 16rem;
+                            label {
+                                font-size: 20rem;
+                            }
+                            input {
+                                padding: 22rem 30rem;
+                                border-radius: 500rem;
+                                border: 1rem solid rgba(54, 59, 35, 0.2);
+                                font-size: 17rem;
+                            }
+                        }
+                    }
+                    .action {
+                        gap: 32rem;
+                        .checkbox {
+                            gap: 18rem;
+                            span {
+                                width: 32rem;
+                                border: 0.5rem solid #363b23;
+                                border-radius: 8rem;
+                            }
+                            p {
+                                font-size: 16rem;
+                            }
+                        }
+
+                        button {
+                            margin-top: 10rem;
+                            padding: 26rem 40rem;
+                        }
+                    }
+                }
+            }
+
+            &-frame {
+                gap: 24rem;
+                div {
+                    padding: 48rem;
+                    border-radius: 24rem;
+                }
+                &-address {
+                    gap: 48rem;
+                    .info {
+                        gap: 20rem;
+                        h3 {
+                            color: var(--black);
+                        }
+                        p {
+                            border-bottom: 1.5rem solid rgba(0, 0, 0, .05);
+                            padding-bottom: 10rem;
+                        }
+
+                        p::after {
+                            height: 1.5rem;
+                        }
+                    }
+
+                    iframe {
+                        height: 164rem;
+                        border-radius: 24rem;
+                    }
+                }
+
+                &-item {
+                    gap: 20rem;
+
+                    a::after {
+                        height: 1.5rem;
+                    }
+
+                    a {
+                        gap: 16rem;
+                        border-bottom: 1.5rem solid rgba(0, 0, 0, .05);
+                        padding-bottom: 10rem;
+                        svg {
+                            width: 16rem;
+                            height: 16rem;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+
+    .footer {
+        margin-top: 120rem;
+        padding-bottom: 60rem;
+        &__up {
+            padding: 80rem 0;
+            border-top: 1rem solid rgba(0, 0, 0, 0.05);
+            border-bottom: 1rem solid rgba(0, 0, 0, 0.05);
+            &-container {
+                .footer__contacts {
+                    p {
+                        margin-top: 30rem;
+                        font-size: 18rem;
+                    }
+                    a {
+                        margin-top: 30rem;
+                        padding-bottom: 10rem;
+                        font-size: 22rem;
+                        svg {
+                            margin-left: 10rem;
+                            width: 18rem;
+                            height: 18rem;
+                        }
+                    }
+
+                    a::after,
+                    a::before {
+                        height: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        &__main {
+            padding: 100rem 0;
+            .logo {
+                width: 227rem;
+                height: 59rem;
+            }
+            .info {
+                gap: 34rem;
+                p {
+                    font-size: 32rem;
+                }
+
+                button {
+                    padding: 23rem 42rem;
+                }
+            }
+
+            .menus {
+                gap: 15%;
+                nav {
+                    gap: 24rem;
+                    span {
+                        margin-bottom: 10rem;
+                    }
+                    ul {
+                        gap: 20rem;
+                    }
+                }
+            }
+        }
+
+        &__soft {
+            button {
+                gap: 6rem;
+                svg {
+                    width: 14rem;
+                    height: 14rem;
+                }
+            }
+        }
+    }
+
+
+    .header {
+        top: 70rem;
+        .container {
+            padding: 0 70rem;
+        }
+        &__body {
+            .header__logo {
+                height: 48rem;
+            }
+            .header__menu {
+                padding: 18rem 40rem;
+                border-radius: 500rem;
+                ul {
+                    gap: 36rem;
+                }
+                li {
+                    max-height: 22.5rem;
+                }
+            }
+
+            .header__action {
+                gap: 12rem;
+                .language {
+                    gap: 6rem;
+                    border-radius: 500rem;
+                    padding: 18rem 24rem;
+                }
+                a {
+                    padding: 18rem 28rem;
+                }
+            }
+        }
+    }
+    .hero {
+        padding: 20rem;
+        &__body {
+            border-radius: 24rem;
+            padding: 50rem;
+            img {
+                border-radius: 24rem;
+            }
+
+            .hero-title {
+                margin-top: -30rem;
+                p {
+                    span.walker {
+                        width: 32rem;
+                    }
+                }
+                p:nth-child(2) {
+                    margin-left: 160rem;
+                }
+            }
+
+            .hero-module {
+                p {
+                    font-size: 20rem;
+                }
+                .action {
+                    gap: 28rem;
+                    a {
+                        padding: 24rem 40rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .partners {
+        &__body {
+            gap: 48rem;
+            .partners__stroke-wrap::after {
+                width: 350rem;
+            }
+
+            .partners__stroke-wrap::before {
+                width: 350rem;
+            }
+
+            .partners__stroke {
+                gap: 50rem;
+            }
+            &-frame {
+                gap: 50rem;
+                img {
+                    max-width: 219rem;
+                    max-height: 36rem;
+                }
+            }
+        }
+    }
+
+    .works {
+        padding-left: 60rem;
+        &__body {
+            gap: 60rem;
+            .works-head {
+                padding-right: 60rem;
+                a {
+                    padding: 26rem 40rem;
+                }
+            }
+
+            .works-container {
+                gap: 24rem;
+                .work {
+                    border-radius: 24rem;
+                    width: 703rem;
+                    min-width: 703rem;
+                    height: 703rem;
+                    padding: 48rem;
+                    .work-information {
+                        gap: 32rem;
+                    }
+                    .circle {
+                        width: 64rem;
+                        height: 64rem;
+                        margin-top: -32rem;
+                        margin-left: -32rem;
+                        svg {
+                            width: 18rem;
+                            height: 18rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .indicators {
+        &__body {
+            .item {
+                gap: 30rem;
+                .awesome {
+                    .animate-number {
+                        max-height: 128rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .request {
+        &__body {
+            border-radius: 24rem;
+            .request__image {
+                border-radius: 24rem;
+            }
+
+            &-frame {
+                padding: 50rem 60rem;
+                gap: 30rem;
+
+                .request__head {
+                    gap: 30rem;
+                }
+
+                .request__form {
+                    gap: 30rem;
+                    .inputs {
+                        gap: 30rem;
+                        .input-wrap {
+                            gap: 16rem;
+                            label {
+                                font-size: 20rem;
+                            }
+
+                            input {
+                                padding: 22rem 30rem;
+                                border-radius: 500rem;
+                                border: 1rem solid rgba(54, 59, 35, 0.2);
+                                font-size: 17rem;
+                            }
+                        }
+                    }
+                    .checkbox {
+                        gap: 18rem;
+                        span {
+                            width: 32rem;
+                            border: 0.5rem solid #363b23;
+                            border-radius: 8rem;
+                        }
+                        p {
+                            font-size: 16rem;
+                        }
+                    }
+                    button {
+                        margin-top: 10rem;
+                        padding: 26rem 40rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .material {
+        &__body {
+            gap: 70rem;
+            &-frame {
+                gap: 24rem;
+                .item {
+                    gap: 48rem;
+                    img {
+                        border-radius: 24rem;
+                    }
+                    .info {
+                        h3 {
+                            font-size: 42rem;
+                        }
+                        p {
+                            max-width: 60%;
+                            font-size: 24rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .work__heading {
+        margin-top: 207rem;
+        &-body {
+            gap: 60rem;
+        }
+    }
+
+    .work__preview {
+        &-body {
+            gap: 70rem;
+            img {
+                border-radius: 24rem;
+            }
+            &-attr {
+                gap: 70rem;
+                .item {
+                    gap: 18rem;
+                    span {
+                        font-size: 24rem;
+                    }
+                    p {
+                        font-size: 32rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .work__blocks {
+        &-body {
+            gap: 70rem;
+            &-about {
+                gap: 70rem;
+                img {
+                    border-radius: 24rem;
+                }
+            }
+
+            &-attr {
+                .item {
+                    padding: 48rem;
+                    gap: 42rem;
+                    h3 {
+                        font-size: 42rem;
+                    }
+                }
+            }
+
+            &-gallery {
+                gap: 24rem;
+                img {
+                    border-radius: 24rem;
+                }
+            }
+        }
+    }
+}

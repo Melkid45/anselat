@@ -83,7 +83,10 @@
         padding: 100px 0;
         width: 100%;
         align-items: start;
-
+        .logo{
+            width: 227px;
+            height: 59px;
+        }
         .info {
             display: -webkit-box;
             display: -ms-flexbox;

@@ -1,10 +1,20 @@
+let windowWidth = window.outerWidth
+console.log(windowWidth)
+if (windowWidth < 780) {
+  let desk = document.querySelectorAll('.desk')
+  desk.forEach(element => { element.remove() })
+} else {
+  let mob = document.querySelectorAll('.mob')
+  mob.forEach(element => { element.remove() })
+}
+
 function observerFadeIn() {
   function onEntry(e) {
     e.forEach((e => { e.isIntersecting && e.target.classList.add("show") }))
   }
   let options = { threshold: [.5] },
     observer = new IntersectionObserver(onEntry, options),
-    elements = document.querySelectorAll(".el--fade, .el--opacity"); for (let e of elements) observer.observe(e);
+    elements = document.querySelectorAll(".el--fade, .el--opacity, .el--left"); for (let e of elements) observer.observe(e);
 }
 
 
@@ -47,18 +57,53 @@ if (title) {
   }
 }
 
+let mainTitle = document.querySelector('.main-title')
+if (mainTitle) {
+  let splitTitle = mainTitle.textContent.split('');
+  mainTitle.textContent = '';
+  splitTitle.forEach((letter, index) => {
+    console.log(letter)
+    let span = document.createElement('span')
+    span.textContent = letter;
+    if (letter == ' ') {
+      span.classList.add('walker')
+    }
+    mainTitle.appendChild(span)
+  })
+  let spansTitle = mainTitle.querySelectorAll('span')
+  spansTitle.forEach((spanEl) => {
+    gsap.set(spanEl, {
+      opacity: 0,
+      yPercent: 15,
+      rotate: 5,
+    })
+  })
+  function animateMainTitle() {
+    gsap.to(spansTitle, {
+      opacity: 1,
+      rotate: 0,
+      yPercent: 0,
+      duration: 0.4,
+      ease: 'power1.inOut',
+      stagger: {
+        from: 'start',
+        each: 0.15
+      }
+    })
+  }
+}
 
 
 // Works 
 let workContainer = document.querySelector('.works-container')
-if (workContainer) {
+if (workContainer && windowWidth > 780) {
   let gap = window.getComputedStyle(workContainer).getPropertyValue("gap")
   let padding = window.getComputedStyle(document.querySelector('.works')).getPropertyValue("padding-left");
   padding = Number(padding.slice(0, -2));
   gap = Number(gap.slice(0, -2));
   let works = workContainer.querySelectorAll('.work')
-  let formula = (works[0].clientWidth + gap) * (works.length - 1) - (works[0].clientWidth - gap * 3.5) - (padding * 4);
-
+  let formula = (works[0].clientWidth + gap) * (works.length - 1) - (works[0].clientWidth - gap * 3.5) - (padding * 7);
+  console.log(formula)
   gsap.to(workContainer, {
     x: -formula,
     ease: 'power1.inOut',
@@ -244,33 +289,114 @@ Indititles.forEach((item) => {
 // Preloader
 window.addEventListener('load', () => {
   const preloader = document.getElementsByClassName('preloader');
-  gsap.to(preloader, {
-    opacity: 0,
-    pointerEvents: 'none',
-    duration: 1,
-    ease: 'power1.inOut',
+  gsap.registerPlugin(DrawSVGPlugin);
+
+  const letters = document.querySelectorAll(".letters");
+  const greenLines = document.querySelectorAll(".green-lines");
+
+  gsap.set([letters, greenLines], { drawSVG: "0%" });
+
+  const tl = gsap.timeline({
+    defaults: { duration: 1.2, ease: "power2.out" },
     onComplete: () => {
-      preloader[0].style.display = 'none';
-      if (title) {
-        animateHero();
-      }
-      observerFadeIn();
-      document.querySelector('.header').classList.remove('back');
+      gsap.to('.preloader', {
+        opacity: 0,
+        pointerEvents: 'none',
+        duration: 0.5,
+        onComplete: () => {
+          if (title) {
+            animateHero();
+          }
+          if (mainTitle) {
+            animateMainTitle();
+          }
+          setTimeout(() => {
+            observerFadeIn();
+            document.querySelector('.header').classList.remove('back');
+          }, 1000);
+        }
+      });
     }
   });
+
+  tl.to(letters, {
+    drawSVG: "100%",
+    stagger: {
+      each: 0.08,
+      from: 'center',
+    }
+  }).to(letters, {
+    fill: '#000',
+    duration: 1,
+    ease: 'power1.inOut',
+    stagger: {
+      each: 0.05,
+      from: 'center'
+    }
+  })
+
+  tl.to(greenLines, {
+    drawSVG: "100%",
+    duration: 1,
+    stagger: 0.2
+  }, '-=0').to(greenLines, {
+    fill: '#B8F13C',
+    duration: 1,
+    ease: 'power1.inOut',
+    stagger: {
+      each: 0.05,
+      from: 'center'
+    }
+  })
+
 });
 
 
 // Menu Header
 
+if (windowWidth > 780) {
+  let linkElements = document.querySelectorAll('.header__menu ul li a')
+  linkElements.forEach((element) => {
+    let word = element.textContent;
+    element.textContent = '';
+    for (let index = 0; index < 2; index++) {
+      let div = document.createElement('div')
+      div.textContent = word;
+      element.appendChild(div)
+    }
+  })
 
-let linkElements = document.querySelectorAll('.header__menu ul li a')
-linkElements.forEach((element) => {
-  let word = element.textContent;
-  element.textContent = '';
-  for (let index = 0; index < 2; index++) {
+
+  let buttonAnimated = document.querySelectorAll('.button-fade')
+
+  buttonAnimated.forEach((element, index) => {
+    let text = element.textContent
+    element.textContent = '';
+    let divWrap = document.createElement('div')
+    divWrap.classList.add('wrap-animation')
     let div = document.createElement('div')
-    div.textContent = word;
-    element.appendChild(div)
+    div.classList.add('animated-fade')
+    for (let index = 0; index < 2; index++) {
+      let span = document.createElement('span')
+      span.textContent = text
+      div.appendChild(span)
+    }
+    divWrap.appendChild(div)
+    element.appendChild(divWrap)
+  })
+}
+
+
+// Mobile
+
+
+let burger = document.querySelector('.burger')
+let headerMenu = document.querySelector('.header__menu')
+let header = document.querySelector('.header')
+burger.addEventListener('click', function (e) {
+  burger.classList.toggle('active')
+  headerMenu.classList.toggle('active')
+  if (!header.classList.contains('no-change')) {
+    header.classList.toggle('active')
   }
 })

@@ -6,6 +6,7 @@
     background: rgba(0, 0, 0, 0);
     z-index: 99;
     transition: all 0.5s ease;
+
     .container {
         padding: 0 70px;
     }
@@ -18,6 +19,14 @@
 
         .header__logo {
             height: 48px;
+
+            .dark {
+                display: none;
+            }
+
+            .light {
+                display: flex;
+            }
 
             img {
                 width: 100%;
@@ -43,15 +52,18 @@
                 overflow: hidden;
                 max-height: 22.5px;
                 display: flex;
-                a{
+
+                a {
                     display: flex;
                     flex-direction: column;
-                    transition: all 0.3s ease-out;
+                    transition: all 0.5s ease;
                 }
             }
+
             li:hover {
                 opacity: 1;
-                a{
+
+                a {
                     transform: translateY(-100%);
                 }
             }
@@ -75,12 +87,14 @@
                 padding: 18px 24px;
                 color: var(--black);
             }
-            a{
+
+            a {
                 padding: 18px 28px;
             }
         }
     }
 }
-.header.back{
+
+.header.back {
     transform: translateY(-300%);
 }

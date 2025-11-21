@@ -1,12 +1,13 @@
-<header class="header back">
+<header class="header">
     <div class="container">
         <div class="header__body">
             <a href="" class="header__logo">
-                <img src="images/dist/logo.svg" alt="" />
+                <img class="light" src="../images/dist/logo-light.svg" alt="">
+                <img class="dark" src="../images/dist/logo-dark.svg" alt="">
             </a>
-            <nav class="header__menu">
+            <nav class="header__menu desk">
                 <ul>
-                    <li class="base">
+                    <li class="base current">
                         <a href="">Sākums</a>
                     </li>
                     <li class="base">
@@ -23,7 +24,7 @@
                     </li>
                 </ul>
             </nav>
-            <div class="header__action">
+            <div class="header__action desk">
                 <div class="language base">
                     LV
                     <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,10 +32,57 @@
                             stroke-opacity="0.4" />
                     </svg>
                 </div>
-                <a href="" class="button button--green button--middle">
+                <a href="" class="button button--green button--middle button-fade">
                     Aprēķināt cenu
                 </a>
+            </div>
+            <div class="burger mob">
+                <span></span>
+                <span></span>
             </div>
         </div>
     </div>
 </header>
+<div class="header__menu mob">
+    <nav>
+        <ul>
+            <li class="title">
+                <a href="">
+                    Sākums
+                </a>
+            </li>
+            <li class="title">
+                <a href="">
+                    Par mums
+                </a>
+            </li>
+            <li class="title">
+                <a href="">
+                    Mūsu darbi
+                </a>
+            </li>
+            <li class="title">
+                <a href="">
+                    Materiāli
+                </a>
+            </li>
+            <li class="title">
+                <a href="">
+                    Kontakti
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="action">
+        <a class="button button--green button--middle" href="">
+            Rezervējiet vizīti
+        </a>
+        <a class="button button--white button--middle" href="">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.530273 13.75L13.5303 0.750001" stroke="black" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M0.530273 0.75L13.5303 0.750001L13.5303 13.75" stroke="black" stroke-width="1.5" />
+            </svg>
+            Skatīt darbus
+        </a>
+    </div>
+</div>
