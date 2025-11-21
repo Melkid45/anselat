@@ -102,14 +102,13 @@ if (workContainer && windowWidth > 780) {
   padding = Number(padding.slice(0, -2));
   gap = Number(gap.slice(0, -2));
   let works = workContainer.querySelectorAll('.work')
-  let formula = (works[0].clientWidth + gap) * (works.length - 1) - (works[0].clientWidth - gap * 3.5) - (padding * 7);
-  console.log(formula)
+  let formula = (works[0].clientWidth + gap) * (works.length - 1) - (works[0].clientWidth - gap * 3.5) - (padding * 8);
   gsap.to(workContainer, {
     x: -formula,
     ease: 'power1.inOut',
     scrollTrigger: {
-      start: 'top-=30%',
-      trigger: workContainer,
+      start: 'top-=15%',
+      trigger: '.works',
       end: `+=${formula}`,
       pin: true,
       scrub: 1,
